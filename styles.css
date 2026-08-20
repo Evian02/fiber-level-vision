@@ -108,7 +108,14 @@ a { color: inherit; text-decoration: none; }
   background: radial-gradient(circle at 45% 45%, transparent 0 35%, rgba(0,0,0,.35) 78%);
   pointer-events: none;
 }
-.hero-visual img { width: 100%; height: 100%; object-fit: cover; object-position: 48% center; }
+.hero-visual img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
 .frame-index {
   position: absolute;
   z-index: 2;
@@ -274,7 +281,21 @@ a { color: inherit; text-decoration: none; }
 .rule-demo i { margin: 0 8px; font-style: normal; color: rgba(255,255,255,.5); }
 .formula-card small { margin-top: 16px; line-height: 1.5; color: rgba(255,255,255,.44); }
 .order-visual { margin: 0; padding: 20px; background: #07110e; }
-.order-visual img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.order-image-window {
+  position: relative;
+  width: min(100%, 560px);
+  margin: 0 auto;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #000;
+}
+.order-image-window img {
+  display: block;
+  width: 206.45%;
+  height: 116.13%;
+  max-width: none;
+  transform: translate(-15.63%, -13.89%);
+}
 .order-visual figcaption { padding: 24px 7px 7px; color: rgba(255,255,255,.58); font-size: 13px; line-height: 1.55; }
 .order-visual figcaption span { display: block; margin-bottom: 9px; color: var(--acid); font: 700 10px var(--font-geist-mono), monospace; text-transform: uppercase; letter-spacing: .1em; }
 
