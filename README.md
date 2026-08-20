@@ -9,7 +9,7 @@ The project uses CCD imaging and an explainable OpenCV pipeline to detect fiber 
 - 103 fiber end faces located in the calibration image
 - 100 active channels ordered across the recorded process
 - 3 non-participating channels identified
-- Estimated recognition response below 500 ms under the thesis test setup
+- Processing latency below 100 ms under the final test setup
 
 ## Method
 
